@@ -6,9 +6,7 @@ class SearchBar extends Component {
     // adding the trim state
     constructor ( props ) {
         super ( props ) ;
-
         this.state = { term : '' } ;
-
     }
 
     // the only required function
@@ -20,7 +18,7 @@ class SearchBar extends Component {
                 <div className="col-md-4"></div>
 
                 <div className="col-md-4" >
-                    <input className="search-bar-input" value={this.state.term} onChange={ e => this.setState({term:e.target.value}) } />
+                    <input className="search-bar-input" onChange={ e => this.props.onVideoSearch(e.target.value) } />
                 </div>
 
                 <div className="col-md-4"></div>
@@ -28,6 +26,7 @@ class SearchBar extends Component {
             </div>
         );
     }
+
 
 
 }

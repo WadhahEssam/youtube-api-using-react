@@ -18,9 +18,9 @@ const VideoArea = ({video}) => {
                 <iframe className="embed-responsive-item" src={url} />
             </div>
 
-            <div className="details" >
-                <div>{video.snippet.title}</div>
-                <div>{video.snippet.description}</div>
+            <div className="card video-area-details" >
+                <div className="card-header video-area-title-text">{video.snippet.title}</div>
+                <div className="card-body video-area-description-text">{video.snippet.description}</div>
             </div>
 
         </div>
